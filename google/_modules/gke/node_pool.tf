@@ -1,8 +1,9 @@
 module "node_pool" {
   source = "./node_pool"
 
-  project  = var.project
-  location = google_container_cluster.current.location
+  project         = var.project
+  location        = google_container_cluster.current.location
+  location_policy = var.location_policy
 
   cluster_name = google_container_cluster.current.name
   pool_name    = "default"

@@ -19,6 +19,8 @@ locals {
 
   cluster_node_locations_lookup = lookup(local.cfg, "cluster_node_locations", "")
   cluster_node_locations        = split(",", local.cluster_node_locations_lookup)
+  cluster_node_location_policy  = local.cfg["cluster_node_location_policy"] != null ? local.cfg["cluster_node_location_policy"] : "BALANCED"
+
 
   cluster_min_master_version = local.cfg["cluster_min_master_version"]
 

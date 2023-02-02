@@ -28,6 +28,11 @@ variable "location" {
   description = "location of the cluster this node pool belongs to."
 }
 
+variable "location_policy" {
+  type        = string
+  description = "Location policy specifies the algorithm used when scaling-up the node pool."
+}
+
 variable "initial_node_count" {
   description = "Initial number of nodes for this node pool."
   type        = string

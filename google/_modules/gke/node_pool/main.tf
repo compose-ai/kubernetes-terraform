@@ -1,8 +1,9 @@
 resource "google_container_node_pool" "current" {
-  name     = var.pool_name
-  project  = var.project
-  cluster  = var.cluster_name
-  location = var.location
+  name            = var.pool_name
+  project         = var.project
+  cluster         = var.cluster_name
+  location        = var.location
+  location_policy = var.location_policy
 
   initial_node_count = var.initial_node_count
 

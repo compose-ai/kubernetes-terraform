@@ -3,8 +3,9 @@ module "node_pool" {
 
   project = local.project_id
 
-  location       = local.location
-  node_locations = local.node_locations
+  location        = local.location
+  node_locations  = local.node_locations
+  location_policy = local.location_policy
 
   cluster_name = var.cluster_metadata["name"]
   pool_name    = local.name

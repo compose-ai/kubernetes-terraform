@@ -18,8 +18,9 @@ module "cluster" {
   metadata_tags   = module.cluster_metadata.tags
   metadata_labels = module.cluster_metadata.labels
 
-  location       = local.region
-  node_locations = local.cluster_node_locations
+  location        = local.region
+  node_locations  = local.cluster_node_locations
+  location_policy = local.cluster_node_location_policy
 
   min_master_version = local.cluster_min_master_version
 

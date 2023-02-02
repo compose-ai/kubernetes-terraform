@@ -13,8 +13,9 @@ locals {
 
   name = lookup(local.cfg, "name")
 
-  location       = local.cfg["location"]
-  node_locations = local.cfg["node_locations"]
+  location        = local.cfg["location"]
+  node_locations  = local.cfg["node_locations"]
+  location_policy = local.cfg["location_policy"] != null ? local.cfg["location_policy"] : "BALANCED"
 
   initial_node_count = local.cfg["initial_node_count"]
   min_node_count     = local.cfg["min_node_count"]

@@ -104,6 +104,16 @@ variable "node_workload_metadata_config" {
   type        = string
 }
 
+variable "guest_accelerator_type" {
+  description = "GPU Video Card."
+  type        = string
+}
+
+variable "guest_accelerator_count" {
+  description = "Number of GPUs."
+  type        = number
+}
+
 variable "taint" {
   description = "Taints to configure for the node pool."
   type        = list(any)

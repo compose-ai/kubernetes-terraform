@@ -72,6 +72,9 @@ locals {
   default_node_workload_metadata_config = tobool(local.disable_workload_identity) == false ? "GKE_METADATA" : "MODE_UNSPECIFIED"
   node_workload_metadata_config         = lookup(local.cfg, "node_workload_metadata_config", local.default_node_workload_metadata_config)
 
+  guest_accelerator_type  = lookup(local.cfg, "guest_accelerator_type", "nvidia-tesla-t4")
+  guest_accelerator_count = lookup(local.cfg, "guest_accelerator_count", 1)
+
   master_authorized_networks_config_cidr_blocks_lookup = lookup(local.cfg, "master_authorized_networks_config_cidr_blocks", null)
   master_authorized_networks_config_cidr_blocks        = local.master_authorized_networks_config_cidr_blocks_lookup == null ? null : split(",", local.master_authorized_networks_config_cidr_blocks_lookup)
 

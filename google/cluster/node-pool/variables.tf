@@ -30,6 +30,10 @@ variable "configuration" {
 
     node_workload_metadata_config = optional(string)
 
+    guest_accelerator_type = optional(string)
+
+    guest_accelerator_count = optional(number)
+
     service_account_email = optional(string)
   }))
   description = "Map with per workspace cluster configuration."

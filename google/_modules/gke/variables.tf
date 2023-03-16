@@ -159,6 +159,16 @@ variable "node_workload_metadata_config" {
   type        = string
 }
 
+variable "guest_accelerator_type" {
+  description = "GPU Video Card."
+  type        = string
+}
+
+variable "guest_accelerator_count" {
+  description = "Number of GPUs."
+  type        = number
+}
+
 variable "master_authorized_networks_config_cidr_blocks" {
   description = "The list of CIDR blocks of external networks that can access the Kubernetes cluster master through HTTPS. Setting cidr_blocks to an empty list disallows public access."
   type        = list(string)

@@ -29,6 +29,9 @@ module "node_pool" {
 
   node_workload_metadata_config = local.node_workload_metadata_config
 
+  guest_accelerator_type  = local.guest_accelerator_type
+  guest_accelerator_count = local.guest_accelerator_count
+
   taint = local.taint
 
   service_account_email                 = local.service_account_email

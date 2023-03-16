@@ -63,6 +63,9 @@ module "cluster" {
   disable_workload_identity     = local.disable_workload_identity
   node_workload_metadata_config = local.node_workload_metadata_config
 
+  guest_accelerator_type  = local.guest_accelerator_type
+  guest_accelerator_count = local.guest_accelerator_count
+
   cluster_database_encryption_key_name = local.cluster_database_encryption_key_name
 
   enable_intranode_visibility = local.enable_intranode_visibility

@@ -36,6 +36,11 @@ resource "google_container_node_pool" "current" {
       mode = var.node_workload_metadata_config
     }
 
+    guest_accelerator {
+      type  = var.guest_accelerator_type
+      count = var.guest_accelerator_count
+    }
+
     taint = var.taint
   }
 

@@ -35,5 +35,8 @@ locals {
 
   node_workload_metadata_config = local.cfg["node_workload_metadata_config"] != null ? local.cfg["node_workload_metadata_config"] : "GKE_METADATA"
 
+  guest_accelerator_type  = local.cfg["guest_accelerator_type"] != null ? local.cfg["guest_accelerator_type"] : "nvidia-tesla-t4"
+  guest_accelerator_count = local.cfg["guest_accelerator_count"] != null ? local.cfg["guest_accelerator_count"] : 1
+
   service_account_email = local.cfg["service_account_email"]
 }

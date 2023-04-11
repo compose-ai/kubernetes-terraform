@@ -33,8 +33,8 @@ module "node_pool" {
 
   node_workload_metadata_config = var.node_workload_metadata_config
 
-  guest_accelerator_type  = var.guest_accelerator_type
-  guest_accelerator_count = var.guest_accelerator_count
+  guest_accelerator_type  = ""
+  guest_accelerator_count = 0
 }
 
 module "node_pool_compose" {

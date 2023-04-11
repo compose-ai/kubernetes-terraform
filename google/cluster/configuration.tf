@@ -35,6 +35,11 @@ locals {
   cluster_min_node_count = lookup(local.cfg, "cluster_min_node_count", 1)
   cluster_max_node_count = lookup(local.cfg, "cluster_max_node_count", 1)
 
+  cluster_initial_node_count_compose = lookup(local.cfg, "cluster_initial_node_count_compose", 1)
+
+  cluster_min_node_count_compose = lookup(local.cfg, "cluster_min_node_count_compose", 1)
+  cluster_max_node_count_compose = lookup(local.cfg, "cluster_max_node_count_compose", 1)
+
   cluster_extra_oauth_scopes_lookup = lookup(local.cfg, "cluster_extra_oauth_scopes", "")
   cluster_extra_oauth_scopes        = split(",", local.cluster_extra_oauth_scopes_lookup)
 
@@ -45,6 +50,8 @@ locals {
   cluster_image_type = lookup(local.cfg, "cluster_image_type", null)
 
   cluster_machine_type = lookup(local.cfg, "cluster_machine_type", "")
+
+  cluster_machine_type_compose = lookup(local.cfg, "cluster_machine_type_compose", "")
 
   cluster_preemptible = lookup(local.cfg, "cluster_preemptible", false)
 

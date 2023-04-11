@@ -63,6 +63,21 @@ variable "max_node_count" {
   type        = string
 }
 
+variable "initial_node_count_compose" {
+  description = "Initial number of nodes for this node pool."
+  type        = string
+}
+
+variable "min_node_count_compose" {
+  description = "Min number of nodes for this node pool."
+  type        = string
+}
+
+variable "max_node_count_compose" {
+  description = "Max number of nodes for this node pool."
+  type        = string
+}
+
 variable "extra_oauth_scopes" {
   description = "List of additional oauth scopes for workers."
   type        = list(string)
@@ -85,6 +100,11 @@ variable "image_type" {
 }
 
 variable "machine_type" {
+  description = "The machine type for nodes in this pool."
+  type        = string
+}
+
+variable "machine_type_compose" {
   description = "The machine type for nodes in this pool."
   type        = string
 }

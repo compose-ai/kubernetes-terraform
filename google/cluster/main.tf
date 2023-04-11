@@ -31,6 +31,11 @@ module "cluster" {
   min_node_count     = local.cluster_min_node_count
   max_node_count     = local.cluster_max_node_count
 
+  initial_node_count_compose = local.cluster_initial_node_count_compose
+  min_node_count_compose     = local.cluster_min_node_count_compose
+  max_node_count_compose     = local.cluster_max_node_count_compose
+  machine_type_compose       = local.cluster_machine_type_compose
+
   extra_oauth_scopes = local.cluster_extra_oauth_scopes
 
   disk_size_gb = local.cluster_disk_size_gb

@@ -28,6 +28,7 @@ resource "azurerm_kubernetes_cluster" "current" {
 
     vm_size         = var.default_node_pool_vm_size
     os_disk_size_gb = var.default_node_pool_os_disk_size_gb
+    os_disk_type = var.default_node_pool_os_disk_type
 
     vnet_subnet_id = var.network_plugin == "azure" ? azurerm_subnet.current[0].id : null
     max_pods       = var.max_pods

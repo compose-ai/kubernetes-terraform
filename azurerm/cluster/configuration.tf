@@ -44,6 +44,7 @@ locals {
   default_node_pool_vm_size              = lookup(local.cfg, "default_node_pool_vm_size", "Standard_B2s")
   default_node_pool_only_critical_addons = lookup(local.cfg, "default_node_pool_only_critical_addons", false)
   default_node_pool_os_disk_size_gb      = lookup(local.cfg, "default_node_pool_os_disk_size_gb", "30")
+  default_node_pool_os_disk_type         = lookup(local.cfg, "default_node_pool_os_disk_type", "Managed")
 
   disable_default_ingress = lookup(local.cfg, "disable_default_ingress", false)
 

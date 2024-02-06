@@ -52,6 +52,7 @@ module "cluster" {
   default_node_pool_only_critical_addons = local.default_node_pool_only_critical_addons
   default_node_pool_vm_size              = local.default_node_pool_vm_size
   default_node_pool_os_disk_size_gb      = local.default_node_pool_os_disk_size_gb
+  default_node_pool_os_disk_type         = local.default_node_pool_os_disk_type
 
   disable_default_ingress  = local.disable_default_ingress
   default_ingress_ip_zones = local.default_ingress_ip_zones

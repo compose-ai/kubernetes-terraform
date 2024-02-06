@@ -47,6 +47,10 @@ resource "azurerm_kubernetes_cluster" "current" {
     pod_cidr           = var.network_plugin == "azure" ? null : var.pod_cidr
   }
 
+  storage_profile {
+    blob_driver_enabled = var.blob_driver_enabled
+  }
+
   dynamic "identity" {
     for_each = var.disable_managed_identities == true ? toset([]) : toset([1])
 

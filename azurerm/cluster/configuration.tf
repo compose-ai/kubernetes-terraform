@@ -70,4 +70,6 @@ locals {
 
   keda_enabled = lookup(local.cfg, "keda_enabled", false)
   vertical_pod_autoscaler_enabled = lookup(local.cfg, "vertical_pod_autoscaler_enabled", false)
+
+  blob_driver_enabled = lookup(local.cfg, "blob_driver_enabled", false)
 }

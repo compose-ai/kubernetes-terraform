@@ -70,4 +70,6 @@ module "cluster" {
 
   keda_enabled = local.keda_enabled
   vertical_pod_autoscaler_enabled = local.vertical_pod_autoscaler_enabled
+
+  blob_driver_enabled = local.blob_driver_enabled
 }

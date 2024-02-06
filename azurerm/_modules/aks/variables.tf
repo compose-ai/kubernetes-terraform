@@ -208,3 +208,10 @@ variable "vertical_pod_autoscaler_enabled" {
   description = "Whether Vertical Pod Autoscaler should be enabled for the cluster."
   default     = false
 }
+
+
+variable "blob_driver_enabled" {
+  type        = bool
+  description = "Whether to enable the blob driver for the cluster."
+  default     = false
+}

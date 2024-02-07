@@ -18,3 +18,7 @@ output "kubeconfig" {
 output "default_ingress_ip" {
   value = module.cluster.default_ingress_ip
 }
+
+output "oidc_issuer_url" {
+  value = module.cluster.oidc_issuer_url
+}

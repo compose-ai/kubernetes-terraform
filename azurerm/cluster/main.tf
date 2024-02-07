@@ -72,4 +72,7 @@ module "cluster" {
   vertical_pod_autoscaler_enabled = local.vertical_pod_autoscaler_enabled
 
   blob_driver_enabled = local.blob_driver_enabled
+
+  workload_identity_enabled = local.workload_identity_enabled
+  oidc_issuer_enabled = local.oidc_issuer_enabled
 }

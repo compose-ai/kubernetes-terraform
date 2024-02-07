@@ -72,4 +72,7 @@ locals {
   vertical_pod_autoscaler_enabled = lookup(local.cfg, "vertical_pod_autoscaler_enabled", false)
 
   blob_driver_enabled = lookup(local.cfg, "blob_driver_enabled", false)
+
+  workload_identity_enabled = lookup(local.cfg, "workload_identity_enabled", false)
+  oidc_issuer_enabled = lookup(local.cfg, "oidc_issuer_enabled", false)
 }

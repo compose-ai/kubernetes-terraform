@@ -215,3 +215,15 @@ variable "blob_driver_enabled" {
   description = "Whether to enable the blob driver for the cluster."
   default     = false
 }
+
+variable "workload_identity_enabled" {
+  type        = bool
+  description = "Whether to enable the workload for the cluster. Must set oidc_issuer_enabled to true too."
+  default     = false
+}
+
+variable "oidc_issuer_enabled" {
+  type        = bool
+  description = "Whether to enable the oidc issuer for the cluster."
+  default     = false
+}

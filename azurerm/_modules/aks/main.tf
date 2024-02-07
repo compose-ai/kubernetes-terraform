@@ -86,4 +86,7 @@ resource "azurerm_kubernetes_cluster" "current" {
   }
 
   tags = var.metadata_labels
+
+  workload_identity_enabled = var.workload_identity_enabled
+  oidc_issuer_enabled = var.oidc_issuer_enabled
 }

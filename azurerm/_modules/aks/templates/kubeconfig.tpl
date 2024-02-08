@@ -7,7 +7,7 @@ clusters:
 contexts:
 - context:
     cluster: ${cluster_name}
-    user: ${cluster_name}
+    user: ${username}
   name: ${cluster_name}
 current-context: ${cluster_name}
 kind: Config

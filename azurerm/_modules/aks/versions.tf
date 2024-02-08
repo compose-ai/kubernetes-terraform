@@ -12,6 +12,10 @@ terraform {
       source  = "hashicorp/azuread"
       version = ">= 1.3.0"
     }
+
+    kubernetes = {
+      source = "hashicorp/kubernetes"
+    }
   }
 
   required_version = ">= 0.13"

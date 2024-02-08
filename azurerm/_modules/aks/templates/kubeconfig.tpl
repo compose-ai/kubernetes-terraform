@@ -7,14 +7,15 @@ clusters:
 contexts:
 - context:
     cluster: ${cluster_name}
-    user: ${username}
+    user: ${cluster_name}
   name: ${cluster_name}
 current-context: ${cluster_name}
 kind: Config
 preferences: {}
 users:
-- name: ${username}
+- name: ${cluster_name}
   user:
     client-certificate-data: ${client_cert}
     client-key-data: ${client_key}
-    token: ${password}
+    username: ${username}
+    password: ${password}

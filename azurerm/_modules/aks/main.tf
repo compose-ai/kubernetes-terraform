@@ -36,6 +36,8 @@ resource "azurerm_kubernetes_cluster" "current" {
     only_critical_addons_enabled = var.default_node_pool_only_critical_addons
 
     zones = var.availability_zones
+
+    node_labels = var.default_node_pool_node_labels
   }
 
   network_profile {

@@ -227,3 +227,8 @@ variable "oidc_issuer_enabled" {
   description = "Whether to enable the oidc issuer for the cluster."
   default     = false
 }
+
+variable "default_node_pool_node_labels" {
+  type        = map(string)
+  description = "The labels to apply to the default node pool"
+}

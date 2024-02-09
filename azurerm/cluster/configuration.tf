@@ -40,7 +40,7 @@ locals {
   default_node_pool_min_count           = lookup(local.cfg, "default_node_pool_min_count", "1")
   default_node_pool_max_count           = lookup(local.cfg, "default_node_pool_max_count", "1")
   default_node_pool_node_count          = lookup(local.cfg, "default_node_pool_node_count", "1")
-  default_node_pool_node_labels          = lookup(local.cfg, "default_node_pool_node_labels", null)
+  default_node_pool_node_labels          = jsondecode(lookup(local.cfg, "default_node_pool_node_labels", "{}"))
 
   default_node_pool_vm_size              = lookup(local.cfg, "default_node_pool_vm_size", "Standard_B2s")
   default_node_pool_only_critical_addons = lookup(local.cfg, "default_node_pool_only_critical_addons", false)

@@ -48,6 +48,7 @@ module "cluster" {
   default_node_pool_min_count           = local.default_node_pool_min_count
   default_node_pool_max_count           = local.default_node_pool_max_count
   default_node_pool_node_count          = local.default_node_pool_node_count
+  default_node_pool_node_labels          = local.default_node_pool_node_labels
 
   default_node_pool_only_critical_addons = local.default_node_pool_only_critical_addons
   default_node_pool_vm_size              = local.default_node_pool_vm_size

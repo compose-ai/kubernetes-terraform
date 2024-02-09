@@ -43,6 +43,7 @@ module "cluster" {
 
   default_node_pool_name = local.default_node_pool_name
   default_node_pool_type = local.default_node_pool_type
+  temporary_name_for_rotation = local.temporary_name_for_rotation
 
   default_node_pool_enable_auto_scaling = local.default_node_pool_enable_auto_scaling
   default_node_pool_min_count           = local.default_node_pool_min_count

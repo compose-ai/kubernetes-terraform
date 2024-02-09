@@ -17,6 +17,8 @@ resource "azurerm_kubernetes_cluster" "current" {
     name = var.default_node_pool_name
     type = var.default_node_pool_type
 
+    temporary_name_for_rotation = var.temporary_name_for_rotation
+
     enable_auto_scaling = var.default_node_pool_enable_auto_scaling
 
     # set min and max count only if autoscaling is _enabled_

@@ -76,4 +76,6 @@ locals {
 
   workload_identity_enabled = lookup(local.cfg, "workload_identity_enabled", false)
   oidc_issuer_enabled = lookup(local.cfg, "oidc_issuer_enabled", false)
+
+  temporary_name_for_rotation = lookup(local.cfg, "temporary_name_for_rotation", false)
 }

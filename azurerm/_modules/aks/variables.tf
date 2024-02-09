@@ -232,3 +232,9 @@ variable "default_node_pool_node_labels" {
   type        = map(string)
   description = "The labels to apply to the default node pool"
 }
+
+variable "temporary_name_for_rotation" {
+  type        = string
+  description = "Name of default node pool when rotating to have a new name."
+  default     = "defaultswap"
+}

@@ -77,4 +77,6 @@ module "cluster" {
 
   workload_identity_enabled = local.workload_identity_enabled
   oidc_issuer_enabled = local.oidc_issuer_enabled
+
+  msi_auth_for_monitoring_enabled = local.msi_auth_for_monitoring_enabled
 }

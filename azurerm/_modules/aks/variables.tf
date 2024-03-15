@@ -238,3 +238,9 @@ variable "temporary_name_for_rotation" {
   description = "Name of default node pool when rotating to have a new name."
   default     = "defaultswap"
 }
+
+variable "msi_auth_for_monitoring_enabled" {
+  type        = bool
+  description = "Whether to enable msi autho for monitoring"
+  default     = false
+}

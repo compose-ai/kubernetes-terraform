@@ -78,4 +78,6 @@ locals {
   oidc_issuer_enabled = lookup(local.cfg, "oidc_issuer_enabled", false)
 
   temporary_name_for_rotation = lookup(local.cfg, "temporary_name_for_rotation", false)
+
+  msi_auth_for_monitoring_enabled = lookup(local.cfg, "msi_auth_for_monitoring_enabled", false)
 }
